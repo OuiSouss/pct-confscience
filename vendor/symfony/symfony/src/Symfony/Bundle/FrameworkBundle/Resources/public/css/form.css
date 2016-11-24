@@ -1,0 +1,60 @@
+/*CSS relatif au formulaire*/
+
+form p {
+  margin-top: 0px;
+}
+ 
+form fieldset {
+	position: relative;
+	width: 500px;
+  margin-bottom: 15px;
+  padding: 10px;
+}
+ 
+form legend {
+  padding: 0px 3px;
+  font-weight: bold;
+  font-variant: small-caps;
+}
+ 
+form label {
+  width: 110px;
+  display: inline-block;
+  vertical-align: top;
+  margin: 6px;
+}
+ 
+form em {
+  font-weight: bold;
+  font-style: normal;
+  color: #f00;
+}
+ 
+form input:focus {
+  background: #eaeaea;
+}
+ 
+form input, textarea {
+  width: 249px;
+}
+ 
+form textarea {
+  height: 100px;
+}
+ 
+form select {
+  width: 254px;
+}
+ 
+form input[type=checkbox] {
+  width: 10px;
+}
+ 
+form input[type=submit] {
+	position: absolute;
+	margin-top: 17px;
+	right: 0;
+  width: auto;
+  height: 50px;
+  padding: 10px;
+}

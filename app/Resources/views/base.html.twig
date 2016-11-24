@@ -3,42 +3,36 @@
 <html>
     <head>
         <meta charset="UTF-8" />
+        {% block stylesheets %}
+		      <link type="text/css" rel="stylesheet" href="{{ asset('bundles/framework/css/general.css') }}"/>
+		    	<link type="text/css" rel="stylesheet" href="{{ asset('bundles/framework/css/header.css') }}"/>
+		    	<link type="text/css" rel="stylesheet" href="{{ asset('bundles/framework/css/page.css') }}"/>
+      	{% endblock %}
         <title> Science infuse </title>
     </head>
     <body>
-    <ul>
-     	<li><a href="{{ path('back-office') }}">Back office</a></li>
+    <div class="header">
+			<ul class="navbar navbar-black navbar-card-2 left-align  inline">
+     		<li><a class ="padding-large hover-grey" href="{{ path('back-office') }}">Back office</a></li>
      	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-      <li><a href="{{ path('presentation') }}">Qui sommes-nous ?</a></li>
+      	<li><a class ="padding-large hover-grey" href="{{ path('presentation') }}">Qui sommes-nous ?</a></li>
       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-      <li><a href="{{ path('login') }}">Login</a></li>
-		</ul>
-		<br>
-   	<center><h1>Page d'accueil</h1></center>
-   	<br>
-   	<br>
-   	<ul>
-      <li>Charte graphique / feuilles de style : Paul</li>
-      <br>
-      <li>Schéma relationnel de la base de données : Amélie</li>
-      <br>
-      <li>Partie responsive, intégration de la navigation circulaire : Alexis</li>
-    </ul>
-    	
-    <br>
-		<center>
-			<br>
-			<br>
-			<h2> Aperçu évènement 1 </h2>
-			<br>
-			<br>
-			<h2> Aperçu évènement 2 </h2>
-			<br>
-			<br>
-			<h2> Aperçu évènement 3 </h2>
-			<br>
-			<br>
-			<h2> ... </h2>
-		</center>
+      	<li><a class ="padding-large hover-grey" href="{{ path('login') }}">Login</a></li>
+			</ul>
+		</div>
+   	<div class="page-content">
+          <div class="content box-shadow color-black background-color-white padding-large left-align page-font-size">
+          	<h2 class="principal title"> Aperçu évènement 1 </h2>
+          	<h2 class="principal title"> Aperçu évènement 2 </h2>
+          	<h2 class="principal title"> Aperçu évènement 3 </h2>
+          </div>
+   		 		<div class="internal-nav box-shadow padding-right-large background-color-white">
+       			<ul class="nav-block nav-block-grey right-align padding-large block">
+      				<li><a class="hover-bold" href="">Charte graphique / feuilles de style : Paul</a></li>
+      				<li><a class="hover-bold" href="">Schéma relationnel de la base de données : Amélie</a></li>
+      				<li><a class="hover-bold" href="">Partie responsive, intégration de la navigation circulaire : Alexis</a></li>
+    				</ul>
+    			</div>
+    </div>
 	</body>
 </html>
