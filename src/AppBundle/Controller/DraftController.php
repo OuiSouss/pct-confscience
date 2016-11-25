@@ -2,6 +2,8 @@
 namespace AppBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
+use Symfony\Component\HttpFoundation\Request;
 
 class DraftController extends Controller
 {
@@ -18,11 +20,11 @@ class DraftController extends Controller
           echo $draft->getContent();//Récupération des evenements marqué comme draft
         }
 
-        return $this->render('draft/index.html.twig');//TODO: Créer la vue d'indexation des drafts
+        return $this->render('draft/index.html.twig');// Créer la vue d'indexation des drafts
     }
 
     /**
-    * @Route("/publish-draft, name="draft_publish")
+    * @Route("/publish-draft", name="draft_publish")
     */
     public function publishDraft(Request $request){
       $id_draft = $request->attributes->get('id_draft');
@@ -30,14 +32,14 @@ class DraftController extends Controller
 
       if($draft == null){
         $response = new Response();
-        $response->setContent("Error 404");//TODO: Associé une vue à une erreur 404
+        $response->setContent("Error 404");// Associer une vue à une erreur 404
         $response->setStatusCode(Response::HTTP_NOT_FOUND);
         return $response;
       }
 
       $event = $draft->getEvent();
 
-      $event->Published();//TODO: Modifier en fonction de l'entité Event
+      $event->Published();// Modifier en fonction de l'entité Event
 
       $em->remove($draft);
       $em->flush();
@@ -59,7 +61,7 @@ class DraftController extends Controller
     }*/
 
     /**
-    * @Route("/remove-draft, name="draft_remover")
+    * @Route("/remove-draft", name="draft_remover")
     */
     public function removeDraftAction(Request $request){
       $draft = $this->getDraft($request->attributes->get($id_draft));
@@ -67,7 +69,7 @@ class DraftController extends Controller
       if($draft != null){
         $em = $this->getDoctrine()->getManager();
         $em->remove($draft);
-        $em->flush()
+        $em->flush();
       }
 
       return $this->redirectToRoute('draft_home_page');//Redirection vers la page d'acceuil du mode draft (Provoque une maj de l'indexation)
