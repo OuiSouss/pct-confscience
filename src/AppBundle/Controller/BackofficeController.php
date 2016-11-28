@@ -40,15 +40,22 @@ class BackofficeController extends Controller{
 		
 		$form->handleRequest($request);
 		
-		if($form->isSubmitted()){
+		if($form->isSubmitted() && $form->isValid()){
 			$event = $form->getData();
 			
-			//suvegarder dans la base de données
+			/* Base de données en attente...
+			$em = $this->getDoctrine()->getManager();
+			$em->persist($event);
+			$em->flush();
+			*/
 			
 			return $this->redirectToRoute('homepage');
 		}
 		
 		return $this->render('backoffice/new.html.twig', array('form' => $form->createView(),));
 	}
-	
+	/*
+	public function editAction(Request $request){
+	}		
+	*/		
 }
