@@ -10,3 +10,4 @@ parameters:
     mailer_user: null
     mailer_password: null
     secret: 8081aeb3ccf1fe3a9db933889e5422bd40db293e
+    database_path: '%kernel.root_dir%/sqlite.db3'
