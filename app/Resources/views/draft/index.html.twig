@@ -15,19 +15,21 @@
     {% include 'header.html.twig' %}
    	<div class="page-content">
           <div class="content box-shadow color-black background-color-white padding-large left-align page-font-size">
-            <h2 class="principal-title">News</h2>
+            <h2 class="principal-title">Vos Brouillons</h2>
             {% if empty is not defined %}
-            {% for result in all_event %}
+            {% for result in all_draft %}
               <fieldset class="index-elt">
-                <legend class="index-elt-title text-bold"><a class="link-event hover-grey" href="/evenement/{{result.id}}">{{result.titre}}</a></legend>
+                <legend class="index-elt-title text-bold"><a class="link-event hover-grey" href="">{{result.titre}}</a></legend>
                 <img src="{{ asset('uploads/images/' ~ result.image) }}" href=""/>
                 <p class="descrption margin-left-large">{{ result.description|length > 50 ? result.description|slice(0, 100) ~ '...' : result.description  }}</br>
-                <a href="/evenement/{{result.id}}">Learn more...</a>
+                <a href="/draft/publish/{{result.id}}">Publier</a>
+                <a href="/draft/modify/{{result.id}}">Modifier</a>
+                <a href="/draft/remove/{{result.id}}">Supprimer</a>
                 </p>
               </fieldset>
             {% endfor %}
             {%else%}
-              <p class="text"/><center>Aucun évenement actuellement en ligne</center></p>
+              <p class="text"/><center>Aucun brouillons</center></p>
             {%endif%}
           </div>
    		 		<div class="internal-nav box-shadow padding-right-large background-color-white">

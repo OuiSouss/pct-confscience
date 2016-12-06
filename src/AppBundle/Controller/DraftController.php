@@ -31,7 +31,7 @@ class DraftController extends Controller
     }
 
     /**
-    * @Route("/publish-draft/{id}", name="draft_publish")
+    * @Route("/draft/publish/{id}", name="draft_publish")
     */
     public function publishDraft($id){
 
@@ -53,7 +53,7 @@ class DraftController extends Controller
     }
 
     /**
-    * @Route("/modify-draft/{id}", name="draft_modify")
+    * @Route("/draft/modify/{id}", name="draft_modify")
     */
     public function modifyDraftAction($id,Request $request){
       $draft = $this->getDoctrine()->getRepository('AppBundle:Event')->find($id);
@@ -107,7 +107,7 @@ class DraftController extends Controller
     }
 
     /**
-    * @Route("/remove-draft/{id}", name="remove_draft")
+    * @Route("/draft/remove/{id}", name="remove_draft")
     */
     public function removeDraftAction($id){
       $draft = $this->getDoctrine()->getRepository('AppBundle:Event')->find($id);
@@ -127,7 +127,7 @@ class DraftController extends Controller
     }
 
     /**
-    * @Route("/unpublished/{id}", name="unpublised_event")
+    * @Route("draft/unpublished/{id}", name="unpublised_event")
     */
     public function unpublishedAction($id){
       $draft = $this->getDoctrine()->getRepository('AppBundle:Event')->find($id);

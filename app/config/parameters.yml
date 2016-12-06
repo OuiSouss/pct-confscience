@@ -2,7 +2,8 @@
 parameters:
     database_host: 127.0.0.1
     database_port: null
-    database_name: symfony
+    database_path: %kernel.root_dir%/science_infuse.db
+    database_name: "science_infuse.db"
     database_user: root
     database_password: null
     mailer_transport: smtp
@@ -10,3 +11,4 @@ parameters:
     mailer_user: null
     mailer_password: null
     secret: 8081aeb3ccf1fe3a9db933889e5422bd40db293e
+    upload_images_directory: '%kernel.root_dir%/../web/uploads/images'
