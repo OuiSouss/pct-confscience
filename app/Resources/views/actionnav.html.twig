@@ -1,7 +1,7 @@
 {% if app.user == result.user%}
 <fieldset>
 <legend>Action</legend>
-<li><img src="{{ asset('bundles/framework/images/logo-delete.gif')}}"/><a class="hover-bold" href="/back-office/remove/{{result.id}}">Supprimer</a></li>
-<li><img src="{{ asset('bundles/framework/images/logo-draft.png')}}"/><a class="hover-bold" href="/draft/unpublished/{{result.id}}">Envoyer vers les brouillons</a></li>
+<li><img src="{{ asset('bundles/science-infuse/images/logo-remove.png')}}"/><a class="hover-bold" href="/back-office/remove/{{result.id}}">Supprimer</a></li>
+<li><img src="{{ asset('bundles/science-infuse/images/logo-draft.png')}}"/><a class="hover-bold" href="/draft/unpublished/{{result.id}}">Envoyer vers les brouillons</a></li>
 </fieldset>
 {% endif %}

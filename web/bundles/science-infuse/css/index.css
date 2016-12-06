@@ -1,0 +1,48 @@
+/*CSS relatif à la mise en forme des pages avec plusieurs élements
+	type:
+		Forum
+		Resultat d'une recherche
+		etc...
+*/
+
+.index-elt{
+	position: relative;
+	margin-top:15px;
+	width: 600px;
+	height: auto;
+}
+
+.description a{
+	text-decoration: underline;
+	color: #38B8FF;
+}
+
+.index-elt .description{
+	text-align: left;
+	font-size: 15px;
+	line-height:1.3;
+}
+
+.link-event{
+	text-decoration: none;
+	color: black;
+}
+
+.index-elt img{
+	left: 5px;
+	float: left;
+	width: 100px;
+	height: 100px;
+}
+
+.nav-link-page{
+	list-style: none;
+}
+
+.nav-link-page li{
+	display: inline;
+}
+
+.link-page{
+	text-decoration: underline;
+}

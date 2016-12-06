@@ -1,16 +1,15 @@
 <!DOCTYPE html>
 
 <html>
-    <head>
       <head>
           <meta charset="UTF-8" />
           {% block stylesheets %}
-            <link type="text/css" rel="stylesheet" href="{{ asset('bundles/framework/css/general.css') }}"/>
-            <link type="text/css" rel="stylesheet" href="{{ asset('bundles/framework/css/header.css') }}"/>
-            <link type="text/css" rel="stylesheet" href="{{ asset('bundles/framework/css/page.css') }}"/>
-            <link type="text/css" rel="stylesheet" href="{{ asset('bundles/framework/css/index.css') }}"/>
-          {% endblock %}
-          <title> Back office </title>
+  		      <link type="text/css" rel="stylesheet" href="{{ asset('bundles/science-infuse/css/general.css') }}"/>
+  		    	<link type="text/css" rel="stylesheet" href="{{ asset('bundles/science-infuse/css/header.css') }}"/>
+  		    	<link type="text/css" rel="stylesheet" href="{{ asset('bundles/science-infuse/css/page.css') }}"/>
+  		    	<link type="text/css" rel="stylesheet" href="{{ asset('bundles/science-infuse/css/index.css') }}"/>
+        	{% endblock %}
+          <title> Science infuse </title>
       </head>
 
     <body>
@@ -22,7 +21,7 @@
             {% for result in all_event %}
               <fieldset class="index-elt">
                 <legend class="index-elt-title text-bold"><a class="link-event hover-grey" href="evenement/{{result.id}}">{{result.titre}}</a></legend>
-                <img src="{{ asset('uploads/images/' ~ result.image) }}" href=""/>
+                <img src="{{ asset('bundles/science-infuse/uploads/images/' ~ result.image) }}" href=""/>
                 <p class="descrption margin-left-large">{{ result.description|length > 50 ? result.description|slice(0, 100) ~ '...' : result.description  }}</br>
                 <a href="">Learn more...</a>
                 </p>
@@ -35,8 +34,8 @@
           <div class="internal-nav box-shadow padding-right-large background-color-white">
             <ul class="nav-block nav-block-grey right-align padding-large block">
               {% include 'usernav.html.twig' %}
-              <li><img src="{{ asset('bundles/framework/images/logo-new.png')}}"/><a class="hover-bold" href="{{path('creation-evenement')}}">Nouvel evenement</a></li>
-              <li><img src="{{ asset('bundles/framework/images/logo-draft.png')}}"/><a class="hover-bold" href="{{path('draft_index')}}">Brouillons</a></li>
+              <li><img src="{{ asset('bundles/science-infuse/images/logo-new.png')}}"/><a class="hover-bold" href="{{path('creation-evenement')}}">Nouvel evenement</a></li>
+              <li><img src="{{ asset('bundles/science-infuse/images/logo-draft.png')}}"/><a class="hover-bold" href="{{path('draft_index')}}">Brouillons</a></li>
             </ul>
           </div>
     </div>

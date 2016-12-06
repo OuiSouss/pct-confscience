@@ -2,21 +2,21 @@
 
 <html>
     <head>
-        <meta charset="UTF-8" />
-        {% block stylesheets %}
-		      <link type="text/css" rel="stylesheet" href="{{ asset('bundles/framework/css/general.css') }}"/>
-		    	<link type="text/css" rel="stylesheet" href="{{ asset('bundles/framework/css/header.css') }}"/>
-		    	<link type="text/css" rel="stylesheet" href="{{ asset('bundles/framework/css/page.css') }}"/>
-		    	<link type="text/css" rel="stylesheet" href="{{ asset('bundles/framework/css/index.css') }}"/>
-      	{% endblock %}
-        <title> Science infuse </title>
+      <meta charset="UTF-8" />
+      {% block stylesheets %}
+        <link type="text/css" rel="stylesheet" href="{{ asset('bundles/science-infuse/css/general.css') }}"/>
+        <link type="text/css" rel="stylesheet" href="{{ asset('bundles/science-infuse/css/header.css') }}"/>
+        <link type="text/css" rel="stylesheet" href="{{ asset('bundles/science-infuse/css/page.css') }}"/>
+        <link type="text/css" rel="stylesheet" href="{{ asset('bundles/science-infuse/css/index.css') }}"/>
+      {% endblock %}
+      <title> Science infuse </title>
     </head>
     <body>
     {% include 'header.html.twig' %}
    	<div class="page-content">
           <div class="content box-shadow color-black background-color-white padding-large left-align page-font-size">
             <h2 class="principal-title">{{result.titre}}</h2>
-            <p class="text"><img src="{{ asset('uploads/images/' ~ result.image) }}"/></p>
+            <p class="text"><img src="{{ asset('/bundles/science-infuse/uploads/images/' ~ result.image) }}"/></p>
             <h3 class="subtitle">Posté par</h3>
             <p class="text">{{result.user.username}}</p>
             <h3 class="subtitle">Date</h3>
@@ -28,9 +28,9 @@
        			<ul class="nav-block nav-block-grey right-align padding-large block">
               {% include 'usernav.html.twig' %}
               {% include 'actionnav.html.twig'%}
-              <li><img src="{{ asset('bundles/framework/images/logo-info.png')}}"/><a class="hover-bold" href="">Infos</a></li>
-      				<li><img src="{{ asset('bundles/framework/images/logo-forum.png')}}"/><a class="hover-bold" href="">Forum</a></li>
-      				<li><img src="{{ asset('bundles/framework/images/logo-link.png')}}"/><a class="hover-bold" href="">Liens Externes</a></li>
+              <li><img src="{{ asset('bundles/science-infuse/images/logo-info.png')}}"/><a class="hover-bold" href="">Infos</a></li>
+      				<li><img src="{{ asset('bundles/science-infuse/images/logo-forum.png')}}"/><a class="hover-bold" href="">Forum</a></li>
+      				<li><img src="{{ asset('bundles/science-infuse/images/logo-link.png')}}"/><a class="hover-bold" href="">Liens Externes</a></li>
     				</ul>
     			</div>
     </div>

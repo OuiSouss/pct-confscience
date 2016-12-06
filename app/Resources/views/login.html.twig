@@ -6,17 +6,16 @@
 {% if error %}
     <div class="registration background-color-white box-shadow">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
 {% endif %}
-  <head>
+<head>
     <meta charset="UTF-8" />
     {% block stylesheets %}
-      <link type="text/css" rel="stylesheet" href="{{ asset('bundles/framework/css/general.css') }}"/>
-      <link type="text/css" rel="stylesheet" href="{{ asset('bundles/framework/css/header.css') }}"/>
-      <link type="text/css" rel="stylesheet" href="{{ asset('bundles/framework/css/page.css') }}"/>
-      <link type="text/css" rel="stylesheet" href="{{ asset('bundles/framework/css/index.css') }}"/>
-      <link type="text/css" rel="stylesheet" href="{{ asset('bundles/framework/css/form.css') }}"/>
+      <link type="text/css" rel="stylesheet" href="{{ asset('bundles/science-infuse/css/general.css') }}"/>
+      <link type="text/css" rel="stylesheet" href="{{ asset('bundles/science-infuse/css/header.css') }}"/>
+      <link type="text/css" rel="stylesheet" href="{{ asset('bundles/science-infuse/css/page.css') }}"/>
+      <link type="text/css" rel="stylesheet" href="{{ asset('bundles/science-infuse/css/form.css') }}"/>
     {% endblock %}
-    <title> Back office </title>
-  </head>
+    <title> Science infuse </title>
+</head>
   <body>
     {% include 'header.html.twig' %}
     <div class="login padding-large background-color-white box-shadow">

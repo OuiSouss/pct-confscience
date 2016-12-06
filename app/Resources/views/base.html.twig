@@ -4,10 +4,10 @@
     <head>
         <meta charset="UTF-8" />
         {% block stylesheets %}
-		      <link type="text/css" rel="stylesheet" href="{{ asset('bundles/framework/css/general.css') }}"/>
-		    	<link type="text/css" rel="stylesheet" href="{{ asset('bundles/framework/css/header.css') }}"/>
-		    	<link type="text/css" rel="stylesheet" href="{{ asset('bundles/framework/css/page.css') }}"/>
-		    	<link type="text/css" rel="stylesheet" href="{{ asset('bundles/framework/css/index.css') }}"/>
+		      <link type="text/css" rel="stylesheet" href="{{ asset('bundles/science-infuse/css/general.css') }}"/>
+		    	<link type="text/css" rel="stylesheet" href="{{ asset('bundles/science-infuse/css/header.css') }}"/>
+		    	<link type="text/css" rel="stylesheet" href="{{ asset('bundles/science-infuse/css/page.css') }}"/>
+		    	<link type="text/css" rel="stylesheet" href="{{ asset('bundles/science-infuse/css/index.css') }}"/>
       	{% endblock %}
         <title> Science infuse </title>
     </head>
@@ -20,7 +20,7 @@
             {% for result in all_event %}
               <fieldset class="index-elt">
                 <legend class="index-elt-title text-bold"><a class="link-event hover-grey" href="/evenement/{{result.id}}">{{result.titre}}</a></legend>
-                <img src="{{ asset('uploads/images/' ~ result.image) }}" href=""/>
+                <img src="{{ asset('/bundles/science-infuse/uploads/images/' ~ result.image) }}" href=""/>
                 <p class="descrption margin-left-large">{{ result.description|length > 50 ? result.description|slice(0, 100) ~ '...' : result.description  }}</br>
                 <a href="/evenement/{{result.id}}">Learn more...</a>
                 </p>
@@ -33,8 +33,8 @@
    		 		<div class="internal-nav box-shadow padding-right-large background-color-white">
        			<ul class="nav-block nav-block-grey right-align padding-large block">
               {% if app.user.username is not defined %}
-      				<li><img src="{{ asset('bundles/framework/images/logo-media.png')}}"/><a class="hover-bold" href="{{path('login')}}">Connexion</a></li>
-      				<li><img src="{{ asset('bundles/framework/images/logo-registration.png')}}"/><a class="hover-bold" href="{{path('registration')}}">Inscription</a></li>
+      				<li><img src="{{ asset('bundles/science-infuse/images/logo-media.png')}}"/><a class="hover-bold" href="{{path('login')}}">Connexion</a></li>
+      				<li><img src="{{ asset('bundles/science-infuse/images/logo-registration.png')}}"/><a class="hover-bold" href="{{path('registration')}}">Inscription</a></li>
               {% else %}
               {% include 'usernav.html.twig' %}
               {% endif %}

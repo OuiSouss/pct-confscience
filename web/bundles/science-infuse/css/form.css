@@ -1,0 +1,81 @@
+/*CSS relatif au formulaire*/
+
+.registration{
+  position: absolute;
+  left: 20px;
+  top: 15%;
+}
+
+.login{
+  position: absolute;
+  top: 15%;
+  width: 400px;
+  left: 20px;
+  display: block;
+}
+
+form{
+    height: auto;
+    color:#202020;
+    -moz-border-radius: 5px 5px 5px 5px ;
+    -webkit-border-radius: 5px 5px 5px 5px ;
+    border-radius: 5px 5px 5px 5px ;
+}
+
+form p {
+  margin-top: 0px;
+}
+
+form fieldset {
+	position: relative;
+	width: 500px;
+  margin-bottom: 15px;
+  padding: 10px;
+}
+
+form legend {
+  padding: 0px 3px;
+  font-weight: bold;
+  font-variant: small-caps;
+}
+
+form label {
+  width: 110px;
+  display: inline-block;
+  vertical-align: top;
+  margin: 6px;
+}
+
+form em {
+  font-weight: bold;
+  font-style: normal;
+  color: #f00;
+}
+
+form input:focus {
+  background: #eaeaea;
+}
+
+form input, textarea {
+  width: 249px;
+}
+
+form textarea {
+  height: 100px;
+}
+
+form select {
+  width: 254px;
+}
+
+form input[type=checkbox] {
+  width: 10px;
+}
+
+form button{
+	position: relative;
+	margin-top: 17px;
+  float: right;
+  width: auto;
+  height: 35px;
+}

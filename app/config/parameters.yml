@@ -11,4 +11,4 @@ parameters:
     mailer_user: null
     mailer_password: null
     secret: 8081aeb3ccf1fe3a9db933889e5422bd40db293e
-    upload_images_directory: '%kernel.root_dir%/../web/uploads/images'
+    upload_images_directory: '%kernel.root_dir%/../web/bundles/science-infuse/uploads/images'

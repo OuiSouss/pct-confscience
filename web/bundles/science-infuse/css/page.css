@@ -1,0 +1,66 @@
+/*CSS relatif au contenu d'une page*/
+
+.principal-title{
+	font-weight: normal;
+	text-align: center;
+	line-height: 2;
+}
+
+.subtitle{
+	font-weight: normal;
+	text-decoration: underline;
+	line-height: 1.8;
+}
+
+.page-content{
+	position: relative;
+	width: 100%;
+}
+
+.page-font-size{
+	font-size: 1em;
+}
+
+.content{
+	position: absolute;
+	top: 100px;
+	margin-left: 20px;
+	z-index: 0;
+	height: auto;
+	width: 60%;
+	font-family: sans-serif;
+}
+
+.internal-nav{
+	position: fixed;
+	margin-right: 20px;
+	z-index: 1;
+	top: 100px;
+	right: 0;
+	width: 25%;
+	height: auto;
+}
+
+.nav-block{
+	list-style: none;
+}
+
+.nav-block a{
+	text-decoration: none;
+}
+
+.nav-block img{
+	width: 20px;
+	height: 20px;
+}
+
+.text{
+	font-size: 15px;
+	line-height: 1.3;
+}
+
+.text img{
+	float: right;
+	width: 200px;
+	height: 200px;
+}

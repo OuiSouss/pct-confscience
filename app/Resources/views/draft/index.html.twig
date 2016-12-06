@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 
 <html>
-    <head>
-        <meta charset="UTF-8" />
-        {% block stylesheets %}
-		      <link type="text/css" rel="stylesheet" href="{{ asset('bundles/framework/css/general.css') }}"/>
-		    	<link type="text/css" rel="stylesheet" href="{{ asset('bundles/framework/css/header.css') }}"/>
-		    	<link type="text/css" rel="stylesheet" href="{{ asset('bundles/framework/css/page.css') }}"/>
-		    	<link type="text/css" rel="stylesheet" href="{{ asset('bundles/framework/css/index.css') }}"/>
-      	{% endblock %}
-        <title> Science infuse </title>
-    </head>
+<head>
+    <meta charset="UTF-8" />
+    {% block stylesheets %}
+      <link type="text/css" rel="stylesheet" href="{{ asset('bundles/science-infuse/css/general.css') }}"/>
+      <link type="text/css" rel="stylesheet" href="{{ asset('bundles/science-infuse/css/header.css') }}"/>
+      <link type="text/css" rel="stylesheet" href="{{ asset('bundles/science-infuse/css/page.css') }}"/>
+      <link type="text/css" rel="stylesheet" href="{{ asset('bundles/science-infuse/css/index.css') }}"/>
+    {% endblock %}
+    <title> Science infuse </title>
+</head>
     <body>
     {% include 'header.html.twig' %}
    	<div class="page-content">
@@ -20,7 +20,7 @@
             {% for result in all_draft %}
               <fieldset class="index-elt">
                 <legend class="index-elt-title text-bold"><a class="link-event hover-grey" href="">{{result.titre}}</a></legend>
-                <img src="{{ asset('uploads/images/' ~ result.image) }}" href=""/>
+                <img src="{{ asset('/bundles/science-infuse/uploads/images/' ~ result.image) }}" href=""/>
                 <p class="descrption margin-left-large">{{ result.description|length > 50 ? result.description|slice(0, 100) ~ '...' : result.description  }}</br>
                 <a href="/draft/publish/{{result.id}}">Publier</a>
                 <a href="/draft/modify/{{result.id}}">Modifier</a>
