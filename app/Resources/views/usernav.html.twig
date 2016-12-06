@@ -1,0 +1,7 @@
+{% if app.user.username is defined %}
+<fieldset class="padding-small">
+<legend>{{app.user.username}}</legend>
+<li><img src="{{ asset('bundles/framework/images/logo-media.png')}}"/><a class="hover-bold" href="{{path('back-office')}}">Votre espace</a></li>
+<li><img src="{{ asset('bundles/framework/images/logo-logout.png')}}"/><a class="hover-bold" href="{{path('logout')}}">Deconnexion</a></li>
+</fieldset>
+{% endif %}
