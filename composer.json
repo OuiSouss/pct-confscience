@@ -9,7 +9,7 @@
     ],
     "minimum-stability": "stable",
     "autoload": {
-        "psr-4": { "": "src/" },
+        "psr-4": { "src/": "src/" },
         "classmap": [ "app/AppKernel.php", "app/AppCache.php" ]
     },
     "autoload-dev": {
