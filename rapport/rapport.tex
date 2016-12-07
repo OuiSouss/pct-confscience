@@ -5,7 +5,7 @@
 \usepackage[francais]{babel} 
 \usepackage {hyperref}
 
-\title{Rapport du projet : Circus Chromaticus}
+\title{Rapport du projet : La Science Infuse}
 \author{Alexis Pichon, Paul Jose Vedrenne, Robin Hardy, Amélie Risi}
 
 \begin{document}
@@ -14,88 +14,103 @@
 \tableofcontents
 \newpage{}
 \section{Cahier des charges}
+	\subsection{Description du projet}
+		\paragraph{}
+			Le projet La Science Infuse consiste à implémenter une structure de communication pour le département de langues, lettres et communication (DLLC) de l'université de Bordeaux, campus de Talence. Ce projet doit permettre de créer un événement autour de conférences scientifiques sur des sujets qui peuvent être techniques mais importants pour la connaissance personnelle d'etudiant, lycéen, individus liés ou non au domaine scientifique. Autour de ces conférences, il faut créer tout un cycle de communication, réflexion, débat. Durant le reste du rapport et du projet, nous allons désormais appelé le projet ConfInScience car nous avons constater un nom similaire sur un autre projet en lien avec la mairie de Talence.
+		\endparagraph{}
+		\paragraph{}
+		Notre but est de confectionner un site web afin que les clients puissent promouvoir leur projet dans le but d'obtenir un financement. Ce site concernera majoritairement un public allant de Bac -3 à Bac +3.
+		\endparagraph{}
+	\endsubsection{}
+	
+	\subsection{Analyse de l'existant}
+		Dans un but de comparaison, nous avons recherché et analysé quelques sites similaires à ce que nous devons produire. Nous allons spécifier ce qu'ils proposent et les commenter.\newline{}
+		Commençons par le site : \href{http://jardin-sciences.unistra.fr/conferences/}{Le jardin des sciences}\newline{}
+		Dans le cadre d'une envie de diffusion du savoir, l'université de Strasbourg a créé "Le jardin des sciences " pour donner l'accès au public à des sujets scientifiques de diverses manières: planétarium, expositions, activités scolaires et conférences tous publics. Ici, nous nous intéresserons seulement à la partie conférences. Voici les services proposés sur le site :
+		\begin{enumerate}
+			\item Accès au programme
+			\item Accès à certaines conférences en ligne
+			\item Une visualisation rapide de l'agenda des événements
+			\item Une visualisation rapide des actualités
+		\end{enumerate}
+		\newline{}
+		Un autre site ressemble fortement au précédent : \href{http://culture.univ-lille1.fr/accueil.html}{Site de la culture de l'université de Lille}.\newline{}
+		Celui-ci présente deux thèmes chaque année et organise des cycles de conférences autour de ceux-ci.
 
-\subsection{Description du projet}
-\paragraph{}
-	Le projet Circus Chromaticus consiste à implémenter une structure de communication pour le département de langues, lettres et communication (DLLC) de l'université de Bordeaux, campus de Talence. Ce projet doit permettre de créer un événement autour de conférences scientifiques sur des sujets qui peuvent être techniques mais importants pour de la connaissance personnelle. Autour de ces conférences, il faut créer tout un cycle de communication, réflexion, débat.
-	\endparagraph{}
-	\paragraph{}
-	 Notre but est de créer un site web afin que les clients puissent promouvoir le projet dans le but d'obtenir un financement. Ce site concernera majoritairement un public allant de Bac -3 à Bac +3.
-	\endparagraph{}
-\endsubsection{}
+		\newline{}
+		Ensuite, nous avons prêté attention à cet autre site : \href{http://video.upmc.fr/}{Site de l'université de la Sorbonne}.\newline{}
+		Ce site a pris le parti de la vidéo afin de diffuser le savoir. C'est pourquoi, ce site propose des vidéos des conférences ayant eu lieu ainsi qu'un résumé.
 
-\subsection{Analyse de l'existant}
-Dans un but de comparaison, nous avons recherché et analysé quelques sites similaires à ce que nous devons produire. Nous allons spécifier ce qu'ils proposent et les commenter.\newline{}
-Commençons par le site : \href{http://jardin-sciences.unistra.fr/conferences/}{Le jardin des sciences}\newline{}
-Dans le cadre d'une envie de diffusion du savoir, l'université de Strasbourg a créé "Le jardin des sciences " pour donner l'accès au public à des sujets scientifiques de diverses manières: planétarium, expositions, activités scolaires et conférences tous publics. Ici, nous nous intéresserons seulement à la partie conférences. Voici les services proposés sur le site :
-\begin {enumerate}
-\item Accès au programme
-\item Accès à certaines conférences en ligne
-\item Une visualisation rapide de l'agenda des événements
-\item Une visualisation rapide des actualités
-\end{enumerate}
-\newline{}
-Un autre site ressemble fortement au précédent : \href{http://culture.univ-lille1.fr/accueil.html}{Site de la culture de l'université de Lille}.\newline{}
-Celui-ci présente deux thèmes chaque année et organise des cycles de conférences autour de ceux-ci.
+		\newline{}
+		Un autre site est fortement ressemblant au précédent : \href{http://webtv.univ-nantes.fr/index.php}{Web TV de l'université de Nantes}
+		Ce site apporte néanmoins d'autres services comme la possibilité de regarder des vidéos sur un sujet spécifiques ou encore ce site propose un moyen de trouver une vidéo plus spécifique à ce que l'on pourrait rechercher grâce à un petit moteur de recherche interne au site.
 
-\newline{}
-Ensuite, nous avons prêté attention à cet autre site : \href{http://video.upmc.fr/}{Site de l'université de la Sorbonne}.\newline{}
-Ce site a pris le parti de la vidéo afin de diffuser le savoir. C'est pourquoi, ce site propose des vidéos des conférences ayant eu lieu ainsi qu'un résumé.
+		\newline{}
+		\newline{}
+		Lors des recherches effectuées, nous n'avons pas trouvé de site proposant réellement tout un cycle de communication autour des conférences mais plutôt soit une entité qui essaye de diffuser le savoir par le biais de diverses activités soit un moyen de diffusion du savoir via des vidéos. 
+		Ce que nous trouvons manquant à ces sites concerne entre autre le manque d'interaction avec les spectateurs.
+	\endsubsection{}
 
-\newline{}
-Un autre site est fortement ressemblant au précédent : \href{http://webtv.univ-nantes.fr/index.php}{WebTV de l'université de Nantes}
-Ce site apporte néanmoins d'autres services comme la possibilité de regarder des vidéos sur un sujet spécifiques ou encore ce site propose un moyen de trouver une vidéo plus spécifique à ce que l'on pourrait rechercher grâce à un petit moteur de recherche interne au site.
+	\subsection{Liste des besoins}
+		\subsubsection{Besoins fonctionnels}
+			\begin{enumerate}
 
-\newline{}
-\newline{}
-Lors des recherches effectuées, nous n'avons pas trouvé de site proposant réellement tout un cycle de communication autour des conférences mais plutôt soit une entité qui essaye de diffuser le savoir par le biais de diverses activités soit un moyen de diffusion du savoir via des vidéos. 
-Ce que nous trouvons manquant à ces sites concerne entre autre le manque d'interaction avec les spectateurs.
-\endsubsection{}
+				\item Il faut que le site ait une organisation circulaire visuellement.
+				\item Il faut un menu composé de liens pour les pages suivantes : Les évènements, Qui sommes-nous, Back office, Forum.
+				\item Les administrateurs doivent avoir la possibilité d'ajouter du contenu facilement.
+				\item Sur la page d'accueil, il faut un affichage de tous les événements à venir, et passés
+				\item Pour chaque évènement, il faut que les utilisateurs du site puissent commenter.
+			\end{enumerate}
+		\endsubsubsection{}
 
-\subsection{Liste des besoins}
-\subsubsection{Besoins fonctionnels}
-\begin{enumerate}
+		\subsubsection{Besoins non fonctionnels}
 
-\item Il faut que le site ait une organisation circulaire visuellement.
-\item Il faut un menu composé de liens pour les pages suivantes : Les évènements, Qui sommes-nous, Back office, Forum.
-\item Les administrateurs doivent avoir la possibilité d'ajouter du contenu facilement.
-\item Sur la page d'accueil, il faut un affichage de tous les événements à venir, et passés
-\item Pour chaque évènement, il faut que les utilisateurs du site puissent commenter.
-\end{enumerate}
-\endsubsubsection{}
+			\begin{enumerate}
+				\item Nous pouvons utiliser le module svg nommé circulus.svg afin de créer un menu circulaire.
+				\item Nous pouvons gérer le front-end avec du PHP
+			\end{enumerate}
+		\endsubsubsection{}
 
-\subsubsection{Besoins non fonctionnels}
-
-\begin {enumerate}
-\item Nous pouvons utiliser le module svg nommé circulus.svg afin de créer un menu circulaire.
-\item Nous pouvons gérer le front-end avec du php
-\endsubsubsection{}
-
-\endsubsection{}
+	\endsubsection{}
 \endsection{}
+
+\newpage{}
 
 \section{Point de vue technique}
 
-\subsection{Architecture du site}
-Nous avons dans un premier temps conçu la hiérarchie du site, c'est-à-dire créé les différentes routes vers les pages : par exemple, depuis la page d'accueil, on a des liens vers le back office, vers le formulaire de login et vers une page de présentation du projet Circus Chromaticus.
-\endsubsection{}
+	\subsection{Les outils utilisés}
+		Nous utilisons Symfony3 durant le développement du projet, ainsi que sqlite3 pour gérer notre base de données. Afin de versionner notre travail, nous avons créer un dépôt git grâce à savane donc voici le lien pour le cloner en anonyme :  https://services.emi.u-bordeaux.fr/projet/git/pct-confscience
+	\endsubsection{}
 
-\subsection{Feuilles de style}
-Ensuite, nous avons élaboré la charte graphique, avec des feuilles de style CSS afin de rendre les éléments des pages plus agréables à visionner.
-\endsubsection{}
+	\subsection{Nos réalisations}
+		\subsubsection{Architecture du site}
+			Nous avons dans un premier temps conçu la hiérarchie du site, c'est-à-dire créé les différentes routes vers les pages : par exemple, depuis la page d'accueil, on a des liens vers le back office, vers le formulaire de login et vers une page de présentation du projet ConfInScience.
+		\endsubsubsection{}
 
-\subsection{Back office}
-Le back office est la partie privée du site. Il est réservé aux utilisateurs ayant des privilèges d'administrateur et sert à créer/modifier un évènement ou le stocker sous forme de "brouillon" avant de décider de le publier. Il permet aussi de modifier la page de présentation du projet Circus Chromaticus.
-\endsubsection{}
+		\subsubsection{Feuilles de style}
+			Ensuite, nous avons élaboré la charte graphique, avec des feuilles de style CSS afin de rendre les éléments des pages plus agréables à visionner.
+			Néanmoins, nous attendons un avis du client afin de s'adapter à ses désirs.
+		\endsubsubsection{}
 
-\subsection{Base de données}
-Un tel site web nécessite une base de données qui stocke les évènements ajoutés, ainsi que les utilisateurs (administrateurs ou non).
-\endsubsection{}
+		\subsubsection{Back office}
+			Le back office est la partie privée du site. Il est réservé aux utilisateurs ayant des privilèges d'administrateur et sert à créer/modifier un évènement ou le stocker sous forme de "brouillon" avant de décider de le publier. Il permet aussi de modifier la page de présentation du projet. Pour cela, nous avons utilisé un bundle symfony pour la gestion de connexion, login, enregistrement, déconnexion, enregistrement avec possibilité d'envoi de mail pour la confirmation : FriendsOfSymfony/UserBundle.
+		\endsubsubsection{}
 
-\subsection{Rendu circulaire sur Android}
-Il reste à présent à concevoir la partie responsive, c'est-à-dire l'organisation circulaire de la page d'accueil. Cette organisation ne doit être disponible que sur Android car il est plus aisé de naviguer de manière circulaire sur Android qu'avec la souris sur un ordinateur.
-\endsubsection{}
+		\subsubsection{Base de données}
+			Un tel site web nécessite une base de données qui stocke les évènements ajoutés, ainsi que les utilisateurs (administrateurs ou non). 
+		\endsubsubsection{}
+	\endsubsection{}
 
+	\subsection{Amélioration à apporter}
+
+		\subsubsection{Forum}
+			Dans le but de permettre aux utilisateurs de commenter les événements, il nous reste à greffer un système de forum pour chaque événements. 
+ 		\endsubsubsection{}
+
+		\subsubsection{Rendu circulaire sur Andoïd}
+			Il reste à présent à concevoir la partie responsive, c'est-à-dire l'organisation circulaire de la page d'accueil. Cette organisation ne doit être disponible que sur Android car il est plus aisé de naviguer de manière circulaire sur Android qu'avec la souris sur un ordinateur.
+		\endsubsubsection{}
+	\endsubsection{}
 \endsection{}
 \end{document}
 
