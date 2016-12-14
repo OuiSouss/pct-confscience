@@ -231,10 +231,6 @@ use Monolog\Logger;
  *   - [level]: level name or int value, defaults to DEBUG
  *   - [bubble]: bool, defaults to true
  *
- * - debug:
- *   - [level]: level name or int value, defaults to DEBUG
- *   - [bubble]: bool, defaults to true
- *
  * - loggly:
  *   - token: loggly api token
  *   - [level]: level name or int value, defaults to DEBUG
@@ -311,6 +307,7 @@ class Configuration implements ConfigurationInterface
                             ->booleanNode('bubble')->defaultTrue()->end()
                             ->scalarNode('app_name')->defaultNull()->end()
                             ->booleanNode('include_stacktraces')->defaultFalse()->end()
+                            ->booleanNode('process_psr_3_messages')->defaultTrue()->end()
                             ->scalarNode('path')->defaultValue('%kernel.logs_dir%/%kernel.environment%.log')->end() // stream and rotating
                             ->scalarNode('file_permission')  // stream and rotating
                                 ->defaultNull()
@@ -738,10 +735,6 @@ class Configuration implements ConfigurationInterface
                             ->ifTrue(function ($v) { return 'flowdock' === $v['type'] && empty($v['source']); })
                             ->thenInvalid('The source has to be specified to use a FlowdockHandler')
                         ->end()
-                    ->end()
-                    ->validate()
-                        ->ifTrue(function ($v) { return isset($v['debug']); })
-                        ->thenInvalid('The "debug" name cannot be used as it is reserved for the handler of the profiler')
                     ->end()
                     ->example(array(
                         'syslog' => array(
